@@ -190,7 +190,7 @@ namespace authorization
 			_Password = passwordTextBox.Text;
 
 			//Передача данных в Sign In
-			Sign_In anketa = new Sign_In(_Username, _E_mail, _Password);
+			Sign_In sign_In = new Sign_In(_Username, _E_mail, _Password);
 
 
 			Close();
@@ -202,7 +202,7 @@ namespace authorization
 		{
 			ReturnDefaultTextBox();
 			RegistrationForm registration = new RegistrationForm();
-			registration.Show();
+			registration.ShowDialog();
 			Close();
 		}
 	}

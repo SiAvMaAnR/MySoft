@@ -21,8 +21,8 @@ namespace MySoft
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			Form2 autorization = new Form2();
-			//Hide();
-			autorization.Show();
+			autorization.ShowDialog();
+			autorization.Activate();
 		}
 
 		private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -30,7 +30,13 @@ namespace MySoft
 			switch (e.KeyCode)
 			{
 				case Keys.Escape: Close(); break;//Выход на "Escape"
+				case Keys.Enter: button1_Click(sender, e); break;
 			}
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }

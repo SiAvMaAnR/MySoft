@@ -73,7 +73,7 @@ namespace authorization
 			switch (e.KeyCode)
 			{
 				case Keys.Escape: Close(); break;//Выход на "Escape"
-				case Keys.Enter: buttonSign_In_Click(buttonSign_In, null); break;//Вход на "Enter"
+				case Keys.Enter: buttonRegister_Click(sender, e); break;//Регистрация на "Enter"
 			}
 		}
 
@@ -161,21 +161,10 @@ namespace authorization
 
 		private void passwordTextBox_Leave(object sender, EventArgs e)
 		{
-			if (buttonSign_In.Focus())
-			{
+			if (buttonRegister.Focus())
+			{ 
 				ReturnDefaultTextBox();
 			}
-		}
-
-
-		//Клик на кнопку авторизации
-		private void buttonSign_In_Click(object sender, EventArgs e)
-		{
-			ActiveControl = label1;
-			ReturnDefaultTextBox();
-
-			//label1 - активный элемент
-			ActiveControl = label1;
 		}
 
 
@@ -183,8 +172,6 @@ namespace authorization
 		private void buttonRegister_Click(object sender, EventArgs e)
 		{
 			ReturnDefaultTextBox();
-			RegistrationForm registration = new RegistrationForm();
-			registration.Show();
 		}
 	}
 }
