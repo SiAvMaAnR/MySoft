@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace authorization
 {
-	public partial class Form2:Form
+	public  partial class Form2:Form
 	{
 		public Form2()
 		{
@@ -26,7 +26,7 @@ namespace authorization
 
 
 		//Всплывающие подсказки
-		private void Form1_Load(object sender, EventArgs e)
+		private async void Form1_Load(object sender, EventArgs e)
 		{
 			//Активировать фокус на label1
 			ActiveControl = label1;
@@ -35,6 +35,10 @@ namespace authorization
 			toolTip.SetToolTip(Username_pictureBox, "Имя пользователя");
 			toolTip.SetToolTip(Password_pictureBox, "Пароль");
 			toolTip.SetToolTip(Email_pictureBox, "Адрес Электронной почты");
+			for (Opacity = 0; Opacity < 1; Opacity += 0.02)
+			{
+				await Task.Delay(10);
+			}
 		}
 
 
@@ -174,12 +178,18 @@ namespace authorization
 		//Клик на кнопку авторизации
 		private void buttonSign_In_Click(object sender, EventArgs e)
 		{
+			ActiveControl = label1;
 			ReturnDefaultTextBox();
+
+			//Считывание данных с окна
 			_Username = userTextBox.Text;
 			_E_mail = emailTextBox.Text;
 			_Password = passwordTextBox.Text;
 
+			//Передача данных в Anketa
 			Sign_In anketa = new Sign_In(_Username, _E_mail, _Password);
+			//label1 - активный элемент
+			ActiveControl = label1;
 		}
 
 

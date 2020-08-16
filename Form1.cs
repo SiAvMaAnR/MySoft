@@ -24,5 +24,13 @@ namespace MySoft
 			Hide();
 			form2.ShowDialog();
 		}
+
+		private void Form1_KeyDown(object sender, KeyEventArgs e)
+		{
+			switch (e.KeyCode)
+			{
+				case Keys.Escape: Close(); break;//Выход на "Escape"
+			}
+		}
 	}
 }

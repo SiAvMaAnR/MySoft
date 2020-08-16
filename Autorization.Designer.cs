@@ -231,7 +231,7 @@
 			this.panelForm.TabIndex = 19;
 			this.panelForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelForm_MouseDown);
 			// 
-			// Form1
+			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,8 +253,7 @@
 			this.Controls.Add(this.panelForm);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.KeyPreview = true;
-			this.Name = "Form1";
-			this.Opacity = 0.98D;
+			this.Name = "Form2";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Авторизация";
 			this.TopMost = true;
