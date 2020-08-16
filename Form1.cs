@@ -11,18 +11,18 @@ using authorization;
 
 namespace MySoft
 {
-	public partial class Form1 : Form
+	public partial class SoftForm : Form
 	{
-		public Form1()
+		public SoftForm()
 		{
 			InitializeComponent();
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			Form2 form2 = new Form2();
-			Hide();
-			form2.ShowDialog();
+			Form2 autorization = new Form2();
+			//Hide();
+			autorization.Show();
 		}
 
 		private void Form1_KeyDown(object sender, KeyEventArgs e)

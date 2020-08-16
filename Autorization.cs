@@ -181,15 +181,19 @@ namespace authorization
 			ActiveControl = label1;
 			ReturnDefaultTextBox();
 
+			//label1 - активный элемент
+			ActiveControl = label1;
+
 			//Считывание данных с окна
 			_Username = userTextBox.Text;
 			_E_mail = emailTextBox.Text;
 			_Password = passwordTextBox.Text;
 
-			//Передача данных в Anketa
+			//Передача данных в Sign In
 			Sign_In anketa = new Sign_In(_Username, _E_mail, _Password);
-			//label1 - активный элемент
-			ActiveControl = label1;
+
+
+			Close();
 		}
 
 
@@ -199,6 +203,7 @@ namespace authorization
 			ReturnDefaultTextBox();
 			RegistrationForm registration = new RegistrationForm();
 			registration.Show();
+			Close();
 		}
 	}
 }
